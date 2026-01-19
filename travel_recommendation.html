@@ -2,45 +2,63 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>TravelBloom</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Travel Recomend</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
   <link rel="stylesheet" href="travel_recommendation.css" />
 </head>
 
 <body>
 
-  <!-- NAVBAR -->
-  <nav class="navbar">
-    <div class="nav-left">
-      <div class="logo">🌍 TravelBloom</div>
+  <nav class="nav">
+    <div class="nav-logo">
+      <i class="fa fa-plane fa-2x plane-icon"></i>
+      <span class="brand">Travel Recomend</span>
+    </div>
+
+    <div class="nav-links">
       <a href="travel_recommendation.html">Home</a>
       <a href="about.html">About Us</a>
       <a href="contact.html">Contact Us</a>
     </div>
 
-    <div class="nav-right">
-      <input id="searchInput" type="text" placeholder="Search: beach, temple, country..." />
-      <button id="searchBtn">Search</button>
-      <button id="clearBtn" class="btn-clear">Clear</button>
+    <div class="nav-search">
+      <input id="searchInput" placeholder="Enter a destination or keyword" type="text" />
+      <i class="fa fa-search searchicon"></i>
+      <button id="searchBtn" class="btn">Search</button>
+      <button id="clearBtn" class="btn clear">Clear</button>
     </div>
   </nav>
 
-  <!-- HERO SECTION -->
-  <header class="hero">
-    <div class="hero-overlay">
-      <h1>Explore The World With TravelBloom ✈️</h1>
-      <p>
-        Discover amazing destinations based on your interests.
-        Search for beaches, temples, or countries and get recommendations instantly.
-      </p>
-    </div>
-  </header>
+  <section class="home">
 
-  <!-- RESULTS -->
-  <main class="main">
-    <h2 class="section-title">Recommendations</h2>
-    <div id="results" class="results"></div>
-  </main>
+    <!-- левая панель соцсетей -->
+    <div class="social">
+      <div class="line"></div>
+      <a href="#"><i class="fa fa-twitter fa-2x"></i></a>
+      <a href="#"><i class="fa fa-facebook fa-2x"></i></a>
+      <a href="#"><i class="fa fa-instagram fa-2x"></i></a>
+      <a href="#"><i class="fa fa-youtube-play fa-2x"></i></a>
+    </div>
+
+    <!-- центр текст -->
+    <div class="home-text">
+      <h1>EXPLORE <br /> DREAM <br /> DESTINATION</h1>
+      <p>
+        It encourages exploration of unfamiliar territories, embracing diverse cultures and landscapes,
+        while pursuing the desired destination that captivates the heart and ignites a sense of wonder.
+      </p>
+      <button class="book">Book Now</button>
+    </div>
+
+    <!-- справа результаты -->
+    <div class="right-panel">
+      <div id="timeBox" class="timeBox hidden"></div>
+      <div id="results" class="results"></div>
+    </div>
+
+  </section>
 
   <script src="travel_recommendation.js"></script>
 </body>
